@@ -209,3 +209,31 @@ button.ghost {
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
+
+/* forgot password */
+
+@media (min-width:800px)
+    {
+    .positionFix{
+        margin-top:100px;
+    }
+}
+@media (max-width:799px)
+    {
+    .positionFix{
+        margin-top:30px;
+    }
+}
+
+.inputBox{
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid black;
+        min-width: 300px
+}
+.sendInstBtn{
+    border-radius: 200px;
+    background-color: rgb(192, 67, 67);
+    text-align: center;
+}
