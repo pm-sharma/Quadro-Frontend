@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" href="home.css">
     <title>Home</title>
 </head>
 
@@ -30,17 +30,113 @@
             </div>
 
             <div class="col-12" style="position: relative;margin-top:60px">
-                <div style="border : 2px solid yellow; position: absolute; right : 0">
+                <div style="border : 2px solid yellow; position: absolute; right : 0;font-size:30px;cursor:pointer" onclick="openNav()">
                     Icon
                 </div>
             </div>
+
+
+            <div class="col-md-12 positionFixForDevices">
+                    <div class="input-group" id="adv-search">
+                        <input type="text" class="form-control" placeholder="Search" />
+                        <div class="input-group-btn" style="margin-left: -40px">
+                            <div class="btn-group" role="group">
+                                <div class="dropdown dropdown-lg">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                                    <div class="dropdown-menu dropdown-menu-right" role="menu" style="margin-top: 20px;padding:25px">
+                                        <form class="form-horizontal" role="form">
+                                          <div class="form-group">
+                                            <label for="filter">Filter by</label>
+                                            <!-- <select class="form-control">
+                                                <option value="0" selected>All Snippets</option>
+                                                <option value="1">Featured</option>
+                                                <option value="2">Most popular</option>
+                                                <option value="3">Top rated</option>
+                                                <option value="4">Most commented</option>
+                                            </select> -->
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="contain">Author</label>
+                                            <!-- <input class="form-control" type="text" /> -->
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="contain">Contains the words</label>
+                                            <!-- <input class="form-control" type="text" /> -->
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
         </div>
     </div>
-
+    <div id="mySidenav" class="sidenav" style="margin-top:170px">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a> -->
+        <div class="accordion" id="accordionExample">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Input 1
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati ab ipsum ullam ex, magnam possimus aspernatur vero quibusdam eveniet qui praesentium, perspiciatis nisi corrupti, tempora fugit accusantium tempore dolores cum?
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Input 2
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga molestias nihil asperiores. Maiores, placeat expedita vel aperiam dolore eaque consequuntur sint praesentium sunt explicabo, cum molestiae laudantium id ipsam inventore!                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Rating
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptatibus cumque autem accusantium dolorem error, laudantium ducimus beatae dignissimos praesentium sunt dolore, a ab ad. Optio numquam architecto facilis quod.                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+          
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+               
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
 </body>
 
 </html>
