@@ -237,3 +237,12 @@ button.ghost {
     background-color: rgb(192, 67, 67);
     text-align: center;
 }
+
+
+
+
+/* Home Page */
+
+.maxWidth{
+    max-width: 140px
+}
