@@ -94,3 +94,39 @@ body {
         margin-top:50%;
     }
   }
+
+
+
+  /* Rating Stars */
+
+
+  .rating {
+    width: 260px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 40px 50px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+.rating label {
+    float: right;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.rating label:not(:first-of-type) {
+    padding-right: 2px;
+}
+.rating label:before {
+    content: "\2605";
+    font-size: 20px;
+    color: #ccc;
+    line-height: 1;
+}
+.rating input {
+    display: none;
+}
+.rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
+    color: #f9df4a;
+}
