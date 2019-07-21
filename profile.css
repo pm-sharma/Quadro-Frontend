@@ -1,3 +1,16 @@
 /* .editProfile{
     display: none;
 } */
+
+
+
+.submitButton {
+    border-radius: 20px;
+    border: 1px solid rgb(179, 106, 66);
+    background: #EB7167;
+    color: #fff;
+    /* font-size: 12px; */
+    /* font-weight: bold; */
+    padding: 12px 45px;
+    /* transition: transform 80ms ease-in; */
+}
