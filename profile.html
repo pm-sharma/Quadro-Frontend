@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Profile</title>
 </head>
@@ -20,12 +21,12 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12" style="position: relative; border : 2px solid orange; height : 100px">
-                <div style="position: absolute; left : 0; display: inline-block">
-                    <img style="height: 100px;width: 100px;" src="logo.png" alt="Quadro">
+            <div class="col-12" style="position: relative;height : 100px;box-shadow: -1px 3px 0px 1px rgba(0,0,0,0.08);">
+                <div style="position: absolute; left : 1; display: inline-block;margin-top:10px">
+                    <img style="height: 60px;width: 50px;  transform: rotate(90deg);" src="Assets/arrow.png" alt="Back">
                 </div>
-                <div style="border : 2px solid yellow; position: absolute; right : 0">
-                    Icon
+                <div style="position: absolute; right : 0">
+                    <img style="height: 70px;width: 70px;" src="Assets/person.png" alt="Profile">
                 </div>
             </div>
         </div>
@@ -33,10 +34,10 @@
 
 
         <div class="row" style="height : auto">
-            <div class="col-lg-3 .d-none .d-lg-block .d-xl-block" style="border : 2px solid blue; ">
+            <div class="col-lg-3 .d-none .d-lg-block .d-xl-block">
             </div>
 
-            <div class="col-12 col-lg-6 onEditHide" style="border : 2px solid orange; padding : 100px 10%">
+            <div class="col-12 col-lg-6 onEditHide" style="padding : 100px 10%">
                 <div style="border : 2px solid pink; border-radius : 10px">
                     <div
                         style="border : 2px solid green; height : 100px; width : 100px; border-radius : 50%; transform: translateY(-50%); margin : auto auto;">
@@ -47,27 +48,28 @@
                         <p>Description :</p>
                     </div>
                     <div class="editButton"
-                        style="position : absolute;border : 2px solid green; height : 50px; width : 50px; border-radius : 50%; transform: translate(-50%, -50%); margin : auto auto; left : 50%">
+                        style="position : absolute;border : 2px solid green; height : 50px; width : 50px; border-radius : 50%; transform: translate(-50%, -50%); margin : auto auto; left : 50%;text-align:center">
+                            <i style="line-height : 50px;" class="fa fa-pencil" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-lg-6 editProfile" style="border : 2px solid orange; padding : 100px 10%">
+            <div class="col-12 col-lg-6 editProfile" style="padding : 100px 10%">
                 <div style="border : 2px solid pink; border-radius : 10px">
                     <div
                         style="border : 2px solid green; height : 100px; width : 100px; border-radius : 50%; transform: translateY(-50%); margin : auto auto;">
                     </div>
                     <div style="padding: 100px 3%">
-                        <p>Name :</p>
-                        <p>Age :</p>
-                        <p>Gender :</p>
-                        <p>Email id :</p>
-                        <p>Date of birth :</p>
-                        <p>Description :</p>
+                        <p>Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 250px;border-radius:5px;height:28px;outline: none;" type="text" name="Name"><br></p>
+                        <p>Age :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 250px;border-radius:5px;height:28px;outline: none;background-color:rgba(240, 236, 236, 0.822)" type="text" name="Name" disabled><br></p>
+                        <p>Gender :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 250px;border-radius:5px;height:28px;outline: none;background-color: rgba(240, 236, 236, 0.822)" type="text" name="Name" disabled><br></p>
+                        <p>Email id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 250px;border-radius:5px;height:28px;outline: none;" type="text" name="Name"><br></p>
+                        <p>Date of birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 250px;border-radius:5px;height:28px;outline: none;background-color: rgba(240, 236, 236, 0.822)" type="text" name="Name" disabled><br></p>
+                        <p>Description :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style="width: 250px;border-radius:5px;height:28px;outline: none;" type="text" name="Name"><br></p></p>
                     </div>
-                    <div class="editButton"
+                    <!-- <div class="editButton"
                         style="position : absolute;border : 2px solid green; height : 50px; width : 50px; border-radius : 50%; transform: translate(-50%, -50%); margin : auto auto; left : 50%">
-                    </div>
+                    </div> -->
                 </div>
                 <div>
                     <div style="text-align: center;
@@ -81,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 .d-none .d-lg-block .d-xl-block" style="border : 2px solid green;">
+            <div class="col-lg-3 .d-none .d-lg-block .d-xl-block">
             </div>
         </div>
 

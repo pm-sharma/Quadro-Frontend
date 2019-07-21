@@ -44,7 +44,7 @@ span {
 a{
     color: #fff;
     font-size: 14px;
-    text-decoration: none;
+    /* text-decoration: none; */
     margin: 15px 0;
 }
 
@@ -90,12 +90,13 @@ a{
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+    outline: none;
 }
 
 button {
     border-radius: 20px;
     border: 1px solid rgb(179, 106, 66);
-    background: #FAA87A;
+    background: #EB7167;
     color: #fff;
     font-size: 12px;
     font-weight: bold;
@@ -114,7 +115,7 @@ button:focus {
 
 button.ghost {
     background: transparent;
-    /* border-color: var(--main-color-primary); */
+    border: 3px solid white;
 }
 
 .form-container {
@@ -133,11 +134,12 @@ button.ghost {
     left: 0;
     width: 50%;
     z-index: 1;
+    opacity: 1;
 }
 @media (min-width:800px){
     .sign-up-container
         {
-            opacity: 0;
+            /* opacity: 0; */
         }
 }
 .overlay-container {
@@ -153,7 +155,7 @@ button.ghost {
 
 .overlay {
     background: var(--main-color-primary);
-    background: linear-gradient(to right,#FAA87A, #4D2572) no-repeat 0 0 / cover;
+    background: linear-gradient(to right,#F6C331, #F6C331) no-repeat 0 0 / cover;
     color: #fff;
     position: relative;
     left: -100%;
@@ -196,13 +198,22 @@ button.ghost {
 .container.right-panel-active .overlay-container {
     transform: translateX(-100%);
 }
-
-.container.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
+@media (min-width:800px)
+{
+    .container.right-panel-active .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+    }
 }
-
+@media (mx-width:800px)
+{
+    .container.right-panel-active .sign-up-container {
+        /* transform: translateX(100%); */
+        opacity: 1;
+        z-index: 5;
+    }
+}
 .container.right-panel-active .overlay {
     transform: translateX(50%);
 }
