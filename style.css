@@ -54,7 +54,9 @@ a{
     box-shadow: 0 14px 28px rgba(0, 191, 255, .25), 0 10px 10px rgba(0, 191, 255, .22);
     position: relative;
     overflow: hidden;
-    width: 768px;
+    width: 90%;
+    height: 90%;
+    margin-top:5%;
     max-width: 100%;
     min-height: 480px;
 }
@@ -127,14 +129,17 @@ button.ghost {
     width: 50%;
     z-index: 2;
 }
-
 .sign-up-container {
     left: 0;
     width: 50%;
     z-index: 1;
-    opacity: 0;
 }
-
+@media (min-width:800px){
+    .sign-up-container
+        {
+            opacity: 0;
+        }
+}
 .overlay-container {
     position: absolute;
     top: 0;
@@ -210,6 +215,23 @@ button.ghost {
     transform: translateX(20%);
 }
 
+/* Login SignUp for mobile */ 
+@media (max-width:800px)
+{
+    .mobileView{
+        width:100%;
+    }
+    .mobileDisplayNone{
+        display: none;
+    }
+}
+
+@media (min-width:800px)
+    {
+    .showOnMobile{
+        display: none;
+    }
+}
 /* forgot password */
 
 @media (min-width:800px)
