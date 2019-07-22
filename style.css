@@ -60,7 +60,7 @@ a{
     max-width: 100%;
     min-height: 480px;
 }
-.form-container form {
+.form-container .form {
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ a{
 
 .form-container input {
     background: var(--main-color-light);
-    border: none;
+    /* border: none; */
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
@@ -225,6 +225,38 @@ button.ghost {
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
+::placeholder{
+    font-size: 15px
+}
+/* Radio Button Styles */
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
 
 /* Login SignUp for mobile */ 
 @media (max-width:800px)
@@ -262,12 +294,13 @@ button.ghost {
         border: 0;
         outline: 0;
         background: transparent;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #e6e3e3;
         min-width: 300px
 }
 .sendInstBtn{
+    color: white;
     border-radius: 200px;
-    background-color: rgb(192, 67, 67);
+    /* background-color: rgb(192, 67, 67); */
     text-align: center;
 }
 

@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css" crossorigin="anonymous">
+    <!-- Include English language -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>login logout</title>
@@ -14,10 +18,9 @@
 
 <body>
 
-
 <div class="container" id="container">
     <div class="form-container sign-up-container mobileView onSignInButtonClickShow">
-        <form action="#">
+        <div class="form">
             <h1>Create Account</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-github"></i></a>
@@ -25,18 +28,32 @@
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="email" placeholder="Email" />
-            <input type="text" placeholder="First Name:" />
-            <input type="text" placeholder="Last Name:" />
-            <input type="password" placeholder="Password" />
-            <input type="password" placeholder="Confirm Password" />
+            <input class="inputBox" type="email" placeholder="Emaill" />
+            <input class="inputBox" type="text" placeholder="Name:" />
+            <input class="inputBox" placeholder="DOB:" type='text' class="datepicker-here" data-position="right top" /><br>
+            <div style="text-align: left; width : 100%;font-weight: 100;color: #797979">
+                    &nbsp;&nbsp;&nbsp;Gender
+            </div>
+            
+            <div style="width : 100%;">
+                <div style="width:45%; display: inline-block;">
+                    <input type='radio' name="gender"/>Male
+                </div>
+                <div style="width:50%; display: inline-block;">
+                    <input type='radio' name="gender"/>Female
+                </div>
+            </div>
+            <input class="inputBox" type="text" placeholder="Experience(Yrs)" />
+            <input class="inputBox" type="number" placeholder="Domain" />
+            <input class="inputBox" type="password" placeholder="Password" />
+            <input class="inputBox" type="password" placeholder="Confirm Password" />
 
             <button id="signup">Sign Up</button>
 
-        </form>
+        </div>
     </div>
     <div class="form-container sign-in-container mobileView showOnSignIn">
-        <form action="#">
+        <div class="form">
             <h1>Sign in</h1>
             <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-github"></i></a>
@@ -44,17 +61,17 @@
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email" />
-            <input type="password" placeholder="Password" />
+            <input class="inputBox" id="email" type="email" placeholder="Email" />
+            <input class="inputBox" id="password" type="password" placeholder="Password" />
             <a href="#">Forgot your password?</a>
-            <button class="signIn">Sign In</button>
+            <button id="signInButton" class="signIn">Sign In</button>
             <div class="showOnMobile">
                 <p>
                     Or
                 </p>
                 <button class="signUpButton">Sign Up</button>
             </div>
-        </form>
+        </div>
     </div>
     <div class="overlay-container mobileDisplayNone">
         <div class="overlay">
@@ -89,13 +106,76 @@
 
     <script>
         $(document).ready(function () {
+            $('#signInButton').click(function () {
+                var email = $('#email').val();
+                var password = $('#password').val();
+                console.log(email, password)
+                fetch("https://dscquadro.herokuapp.com/auth/login", {
+                method: "post",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                //make sure to serialize your JSON body
+                body: JSON.stringify({
+                    email,
+                    password,
+                })
+                })
+                .then( (response) => { 
+                    return response.json()
+                //do something awesome that makes the world a better place
+                })
+                .then( data => console.log("hi get token from here",data)) 
+                // window.location.href = "homePage.html";
+                // window.sessionStorage.accessToken = date.token;
+                sessionStorage.setItem('token', date.token);
+            });
+            // Initialization
+            // $('#my-element').datepicker([options])
+            // Access instance of plugin
+            // $('#my-element').data('datepicker')
             console.log("Hello")
             $('.signUpButton').click(function () {
+                console.log("Bye")
                 $('.showOnSignIn').css("display", "none");
                 $('.onSignInButtonClickShow').css("display", "block");
             });
-        });
+
+            fetch("https://dscquadro.herokuapp.com/auth/signup", {
+            method: "post",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            //make sure to serialize your JSON body
+            body: JSON.stringify({
+                name: "Purushottam Sharma",
+                email: "pmsharma3.00@gmail.com",
+                dob: "06/02/1999",
+                gender: "55",
+                password: "somePassword",
+                experience: 3,
+                domain: "Web technology",
+            })
+            })
+            .then( (response) => { 
+                return response.json()
+            //do something awesome that makes the world a better place
+            })
+            .then( data => console.log(data.message)) 
+            });
+
+            
     </script>
+
+    <script>
+        // function signUpData() {
+
+    // }
+    </script>
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
