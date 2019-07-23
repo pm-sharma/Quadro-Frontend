@@ -2,139 +2,203 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="home.css">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="home.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Home</title>
 </head>
 
 
 <body>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12" style="position: relative">
-                <div style="position: absolute; left : 0; display: inline-block">
-                    <img style="height: 100px;width: 100px;" src="logo.png" alt="Quadro">
-                </div>
-                <div style="display: inline-block; position: absolute; left : 100px; line-height: 90px">
-                    Quadro
-                </div>
-                <div style="border : 2px solid yellow; position: absolute; right : 0">
-                    Icon
-                </div>
-            </div>
-
-            <div class="col-12" style="position: relative;margin-top:60px">
-                <div style="border : 2px solid yellow; position: absolute; right : 0;font-size:30px;cursor:pointer" onclick="openNav()">
-                    Icon
-                </div>
-            </div>
-
-
-            <div class="col-md-12 positionFixForDevices">
-                    <div class="input-group" id="adv-search">
-                        <input style="border-radius: 10px" type="text" class="form-control" placeholder="Search" />
-                        <div class="input-group-btn" style="margin-left: -40px">
-                            <div style="border-radius: 10px" class="btn-group" role="group">
-                                <div class="dropdown dropdown-lg">
-                                    <button style="box-shadow: none;" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-                                    <div class="dropdown-menu dropdown-menu-right" role="menu" style="margin-top: 20px;padding:25px;border-radius: 10px">
-                                        <form class="form-horizontal" role="form">
-                                          <div class="form-group">
-                                            <label for="filter">Filter by</label>
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="contain">Author</label>
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="contain">Contains the words</label>
-                                          </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12" style="position: relative">
+        <div style="position: absolute; left : 0; display: inline-block">
+          <img style="height: 100px;width: 100px;" src="logo.png" alt="Quadro">
         </div>
+        <div style="display: inline-block; position: absolute; left : 100px; line-height: 90px">
+          Quadro
+        </div>
+        <div
+          style="position: absolute; right : 0;border: 2px solid #F6C331;border-radius: 50%;margin-top:10px;margin-right: 5px">
+          <a href="profile.html"><img style="height: 40px;width: 40px;" src="Assets/person.png" alt="Profile"></a>
+        </div>
+      </div>
+
+      <div class="col-12"
+        style="height : 60px;position: relative;margin-top:65px;box-shadow: -1px 3px 0px 1px rgba(0,0,0,0.08)">
+        <div style="position: absolute; height: 60px; right : 0;font-size:30px;cursor:pointer" onclick="openNav()">
+          <img style="height: 30px;width: 30px;" src="Assets/filter.png" alt="Filter">Filter&nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+
+
+      <div class="col-md-12 positionFixForDevices">
+        <div class="input-group" id="adv-search">
+          <input style="border-radius: 10px" type="text" class="form-control" placeholder="Search" />
+          <div class="input-group-btn" style="margin-left: -40px">
+            <div style="border-radius: 10px" class="btn-group" role="group">
+              <div class="dropdown dropdown-lg">
+                <button style="box-shadow: none;" type="button" class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                <div class="dropdown-menu dropdown-menu-right" role="menu"
+                  style="margin-top: 20px;padding:25px;border-radius: 10px">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label for="contain">Name</label>
+                    </div>
+                    <div class="form-group">
+                      <label for="filter">Domain</label>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="filter">Email Id</label>
+                    </div>
+                    <div class="form-group">
+                      <label for="contain">Gender</label>
+                    </div>
+                    <div class="form-group">
+                      <label for="contain">Experience</label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="mySidenav" class="sidenav" style="margin-top:170px">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <!-- <a href="#">About</a>
+  </div>
+  </div>
+  <div id="mySidenav" class="sidenav" style="margin-top:130px">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- <a href="#">About</a>
         <a href="#">Services</a>
         <a href="#">Clients</a>
         <a href="#">Contact</a> -->
-        <div class="accordion" id="accordionExample">
-                <div class="card">
-                  <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Input 1
-                      </button>
-                    </h5>
-                  </div>
-              
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati ab ipsum ullam ex, magnam possimus aspernatur vero quibusdam eveniet qui praesentium, perspiciatis nisi corrupti, tempora fugit accusantium tempore dolores cum?
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Input 2
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga molestias nihil asperiores. Maiores, placeat expedita vel aperiam dolore eaque consequuntur sint praesentium sunt explicabo, cum molestiae laudantium id ipsam inventore!                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Rating
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div>
-                        <div class="rating">
-                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
-                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
-                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
-                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
-                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
-                        </div>                        
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Input 1
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati ab ipsum ullam ex, magnam possimus
+            aspernatur vero quibusdam eveniet qui praesentium, perspiciatis nisi corrupti, tempora fugit accusantium
+            tempore dolores cum?
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              Input 2
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga molestias nihil asperiores. Maiores, placeat
+            expedita vel aperiam dolore eaque consequuntur sint praesentium sunt explicabo, cum molestiae laudantium id
+            ipsam inventore! </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              Rating
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div>
+            <div class="rating">
+              <input type="radio" id="star5" name="rating" value="5" /><label for="star5"></label>
+              <input type="radio" id="star4" name="rating" value="4" /><label for="star4"></label>
+              <input type="radio" id="star3" name="rating" value="3" /><label for="star3"></label>
+              <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label>
+              <input type="radio" id="star1" name="rating" value="1" /><label for="star1"></label>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-          
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "320px";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-               
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "320px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+  <!-- https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query={} -->
+  <script>
+    console.log("bitch")
+
+    $('.dropdown-toggle').click(function () {
+      let query = {
+
+      }
+      console.log("lauda")
+      fetch(`https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query={${query}}`, {
+        method: "get",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': sessionStorage.getItem("token")
+        },
+        //make sure to serialize your JSON body
+        // body: JSON.stringify({
+        //     email : "nikhilsingh498@gmail.com"
+        // })
+
+        // PARAMS:{
+        //   sort:-_id,
+        //   limit:10,
+        //   query:{}
+        // }
+
+
+      })
+        .then((response) => {
+          return response.json()
+          //do something awesome that makes the world a better place
+        })
+        .then(data => console.log(data))
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

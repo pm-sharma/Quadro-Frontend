@@ -28,26 +28,29 @@
                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <span>or use your email for registration</span>
-            <input class="inputBox" type="email" placeholder="Emaill" />
-            <input class="inputBox" type="text" placeholder="Name:" />
-            <input class="inputBox" placeholder="DOB:" type='text' class="datepicker-here" data-position="right top" /><br>
-            <div style="text-align: left; width : 100%;font-weight: 100;color: #797979">
-                    &nbsp;&nbsp;&nbsp;Gender
+            <div>
+                    <input class="inputBox" type="email" placeholder="Email:" />
+                    <input class="inputBox" type="text" placeholder="Name:" />
+                    <input data-language='en'  placeholder="DOB:" type='text' class="datepicker-here" data-position="top left"
+                     style="border : none; border-bottom :  1px solid #e6e3e3" /><br>
+                    <div style="text-align: left; width : 100%;font-weight: 100;color: #797979">
+                            &nbsp;&nbsp;&nbsp;Gender
+                    </div>
+                    
+                    <div style="width : 100%;">
+                        <div style="width:45%; display: inline-block;">
+                            <input type='radio' name="gender"/>Male
+                        </div>
+                        <div style="width:50%; display: inline-block;">
+                            <input type='radio' name="gender"/>Female
+                        </div>
+                    </div>
+                    <input class="inputBox" type="text" placeholder="Experience(Yrs)" />
+                    <input class="inputBox" type="number" placeholder="Domain" />
+                    <input class="inputBox" type="password" placeholder="Password" />
+                    <input class="inputBox" type="password" placeholder="Confirm Password" />
+        
             </div>
-            
-            <div style="width : 100%;">
-                <div style="width:45%; display: inline-block;">
-                    <input type='radio' name="gender"/>Male
-                </div>
-                <div style="width:50%; display: inline-block;">
-                    <input type='radio' name="gender"/>Female
-                </div>
-            </div>
-            <input class="inputBox" type="text" placeholder="Experience(Yrs)" />
-            <input class="inputBox" type="number" placeholder="Domain" />
-            <input class="inputBox" type="password" placeholder="Password" />
-            <input class="inputBox" type="password" placeholder="Confirm Password" />
-
             <button id="signup">Sign Up</button>
 
         </div>
@@ -126,15 +129,21 @@
                     return response.json()
                 //do something awesome that makes the world a better place
                 })
-                .then( data => console.log("hi get token from here",data)) 
-                // window.location.href = "homePage.html";
+                .then( data => {
+                // let token = data.token;
+                console.log("hi get token from here",data.token);
+                sessionStorage.setItem("token", data.token)
+                // if (response.ok) {
+                //     window.location.href = "homePage.html";
+                // } else {
+                //     throw new Error("Things went poorly.");
+                // }
+            })
+            
+            
                 // window.sessionStorage.accessToken = date.token;
-                sessionStorage.setItem('token', date.token);
             });
-            // Initialization
-            // $('#my-element').datepicker([options])
-            // Access instance of plugin
-            // $('#my-element').data('datepicker')
+            
             console.log("Hello")
             $('.signUpButton').click(function () {
                 console.log("Bye")
@@ -167,12 +176,18 @@
             });
 
             
+
+
+
+               
     </script>
 
     <script>
-        // function signUpData() {
-
-    // }
+        
+            // Initialization
+            $('#my-element').datepicker([options])
+            // Access instance of plugin
+            $('#my-element').data('datepicker')
     </script>
 
 

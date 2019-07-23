@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="main">
+    <input type="hello" id="value">
+    <button id="submit">Submit</button>
+
+    <script>
+        window.onload = () => {
+
+            document.getElementById("submit").addEventListener("click", () => {
+                let domain = document.getElementById("main").value;
+                let content = document.getElementById("value").value;
+
+                let query = {};
+                query[domain] = {
+                    $regex : content,
+                    $options : "i"
+                }
+                query = JSON.stringify(query)
+                console.log(query)
+                })
+
+        }
+    </script>
+</body>
+</html>
