@@ -85,25 +85,24 @@ function matchPassword(event) {
     }
 }
 
-function verifyPhoneNumber(event) {
-    if (event.target == undefined){
-        if (event.length == 10){
-            return true
-        }
-        else {
-            return false
-        }
-    }
-    else {
-        if(event.target.value.length == 10){
-            event.target.style.borderColor = "Green"
-        }
-        else {
-            event.target.style.borderColor = "Red"
-        }
-    }
-
-}
+// function verifyPhoneNumber(event) {
+//     if (event.target == undefined){
+//         if (event.length == 10){
+//             return true
+//         }
+//         else {
+//             return false
+//         }
+//     }
+//     else {
+//         if(event.target.value.length == 10){
+//             event.target.style.borderColor = "Green"
+//         }
+//         else {
+//             event.target.style.borderColor = "Red"
+//         }
+//     }
+// }
 
 function nameValidate(event) {
     if (event.target == undefined){

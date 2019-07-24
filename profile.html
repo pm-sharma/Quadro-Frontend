@@ -92,7 +92,7 @@
                     Icon
                 </div>
             </div> -->
-
+            <button id="logoutButton">Logout</button>
     </div>
 
 
@@ -105,9 +105,16 @@
                 $('.editProfile').css("display", "block");
                 $('.onEditHide').css("display", "none");
             });
+            $('#logoutButton').click(function () {
+                sessionStorage.removeItem("token");
+                window.location.href = "index.html";
+            });
         });
     </script>
 
+    <script>
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

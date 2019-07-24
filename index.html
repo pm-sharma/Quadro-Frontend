@@ -133,11 +133,11 @@
                 // let token = data.token;
                 console.log("hi get token from here",data.token);
                 sessionStorage.setItem("token", data.token)
-                // if (response.ok) {
-                //     window.location.href = "homePage.html";
-                // } else {
-                //     throw new Error("Things went poorly.");
-                // }
+                if (data.token) {
+                    window.location.href = "homePage.html";
+                } else {
+                    console.log("Maa chuda")
+                }
             })
             
             
