@@ -128,3 +128,32 @@
 .rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
     color: #f9df4a;
 }
+
+
+/* Other Developer details */
+
+
+.circle {
+    height : 10px;
+    width : 10px;
+    border-radius : 50%;
+    border:  2px solid black;
+}
+
+.connect {
+    border-radius : 25px;
+    min-width : 130px;
+    background: #EB7167;
+    color : white;
+}
+
+.avatar {
+    position : absolute;
+    left : 50%;
+    top : 50%;
+    transform: translate(-50%,-50%);
+    height : 70px;
+    width : 70px;
+    border-radius : 50%;
+    border:  2px solid black;
+}

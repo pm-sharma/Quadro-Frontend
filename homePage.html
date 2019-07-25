@@ -33,6 +33,7 @@
         </div>
       </div>
 
+
       <div class="col-12"
         style="height : 60px;position: relative;margin-top:65px;box-shadow: -1px 3px 0px 1px rgba(0,0,0,0.08)">
         <div style="position: absolute; height: 60px; right : 0;font-size:30px;cursor:pointer" onclick="openNav()">
@@ -41,6 +42,7 @@
       </div>
 
 
+<!-- 
       <div class="col-md-12 positionFixForDevices">
         <div class="input-group" id="adv-search">
           <input style="border-radius: 10px" type="text" class="form-control" placeholder="Search" />
@@ -74,10 +76,160 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
+
+  <div class="container-fluid">
+
+    <div class="row" id="cards" style="background-color: #F4F4F4;padding: 40px">
+
+      <div class="col-12 col-md-6 col-lg-4" style="border :2px solid blue;background-color: #FFFFFF;border-radius: 10px;box-shadow: 10px 10px 5px 0px rgba(247,247,247,0.91);
+      ">
+        <div style="padding: 20px;">
+        <!-- btn and avail section -->
+        <div class="row">
+          <div class="col-6" style="text-align: center; border : 2px solid orange">
+            <div class="circle"></div>
+          </div>
+          <div class="col-6" style="text-align: center">
+            <button class="connect">Connect</button>
+          </div>
+        </div>
+
+        <!-- avatar and text section -->
+        <div class="row">
+          <div class="col-4"> 
+              <div class="avatar"></div>
+          </div>
+          <div class="col-8">
+            <div style="padding : 10px 15px">
+              Name : <span>Nikhil</span>
+            </div>
+            <div style="padding : 10px 15px">
+              Age : <span>20</span>
+            </div>
+            <div style="padding : 10px 15px">
+              Description : <span>Lauda hain</span>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="col-12 col-md-6 col-lg-4" style="border :2px solid blue;padding: 20px;background-color: #FFFFFF;border-radius: 10px">
+        
+          <!-- btn and avail section -->
+          <div class="row">
+            <div class="col-6" style="text-align: center; border : 2px solid orange">
+              <div class="circle"></div>
+            </div>
+            <div class="col-6" style="text-align: center">
+              <button class="connect">Connect</button>
+            </div>
+          </div>
+  
+          <!-- avatar and text section -->
+          <div class="row">
+            <div class="col-4"> 
+                <div class="avatar"></div>
+            </div>
+            <div class="col-8">
+              <div style="padding : 10px 15px">
+                Name : <span>Nikhil</span>
+              </div>
+              <div style="padding : 10px 15px">
+                Age : <span>20</span>
+              </div>
+              <div style="padding : 10px 15px">
+                Description : <span>Lauda hain</span>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+
+
+
+        <div class="col-12 col-md-6 col-lg-4" style="border :2px solid blue;padding: 20px;background-color: #FFFFFF;border-radius: 10px">
+        
+            <!-- btn and avail section -->
+            <div class="row">
+              <div class="col-6" style="text-align: center; border : 2px solid orange">
+                <div class="circle"></div>
+              </div>
+              <div class="col-6" style="text-align: center">
+                <button class="connect">Connect</button>
+              </div>
+            </div>
+    
+            <!-- avatar and text section -->
+            <div class="row">
+              <div class="col-4"> 
+                  <div class="avatar"></div>
+              </div>
+              <div class="col-8">
+                <div style="padding : 10px 15px">
+                  Name : <span>Nikhil</span>
+                </div>
+                <div style="padding : 10px 15px">
+                  Age : <span>20</span>
+                </div>
+                <div style="padding : 10px 15px">
+                  Description : <span>Lauda hain</span>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+
+
+
+
+          <div class="col-12 col-md-6 col-lg-4" style="border :2px solid blue;padding: 20px;background-color: #FFFFFF;border-radius: 10px;box-shadow: 10px 10px 5px 0px rgba(247,247,247,0.91);
+          ">
+        
+              <!-- btn and avail section -->
+              <div class="row">
+                <div class="col-6" style="text-align: center; border : 2px solid orange">
+                  <div class="circle"></div>
+                </div>
+                <div class="col-6" style="text-align: center">
+                  <button class="connect">Connect</button>
+                </div>
+              </div>
+      
+              <!-- avatar and text section -->
+              <div class="row">
+                <div class="col-4"> 
+                    <div class="avatar"></div>
+                </div>
+                <div class="col-8">
+                  <div style="padding : 10px 15px">
+                    Name : <span>Nikhil</span>
+                  </div>
+                  <div style="padding : 10px 15px">
+                    Age : <span>20</span>
+                  </div>
+                  <div style="padding : 10px 15px">
+                    Description : <span>Lauda hain</span>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+
+
+      
+    </div>
+
+
   </div>
+
   <div id="mySidenav" class="sidenav" style="margin-top:130px">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <!-- <a href="#">About</a>
@@ -157,37 +309,61 @@
   <script>
     console.log("bitch")
 
-    $('.dropdown-toggle').click(function () {
-      let query = {
-
-      }
-      console.log("lauda")
-      fetch(`https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query={${query}}`, {
+    window.onload = () => {
+      let data = fetch(`https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query={}`, {
         method: "get",
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-          'Authorization': sessionStorage.getItem("token")
+          'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE1NjEyNDgyMTl9.72ssLjjKFhNEX397D0IVlZDem33joyg51FSP9LKR42E'        
         },
-        //make sure to serialize your JSON body
-        // body: JSON.stringify({
-        //     email : "nikhilsingh498@gmail.com"
-        // })
-
-        // PARAMS:{
-        //   sort:-_id,
-        //   limit:10,
-        //   query:{}
-        // }
-
-
       })
         .then((response) => {
           return response.json()
-          //do something awesome that makes the world a better place
         })
-        .then(data => console.log(data))
-    });
+        .then(data => {
+          return data
+        })
+
+        data.then(arr => {
+          arr.forEach(ele => {
+
+          });
+        })
+    }
+
+
+    // $('.dropdown-toggle').click(function () {
+    //   let query = {
+
+    //   }
+    //   console.log("lauda")
+    //   fetch(`https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query={${query}}`, {
+    //     method: "get",
+    //     headers: {
+    //       'Accept': 'application/json',
+    //       'Content-Type': 'application/json',
+    //       'Authorization': sessionStorage.getItem("token")
+    //     },
+    //     //make sure to serialize your JSON body
+    //     // body: JSON.stringify({
+    //     //     email : "nikhilsingh498@gmail.com"
+    //     // })
+
+    //     // PARAMS:{
+    //     //   sort:-_id,
+    //     //   limit:10,
+    //     //   query:{}
+    //     // }
+
+
+    //   })
+    //     .then((response) => {
+    //       return response.json()
+    //       //do something awesome that makes the world a better place
+    //     })
+    //     .then(data => console.log(data))
+    // });
   </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
