@@ -1,111 +1,152 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css"
+        crossorigin="anonymous">
     <!-- Include English language -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>login logout</title>
 </head>
 
 
 <body>
 
-<div class="container" id="container">
-    <div class="form-container sign-up-container mobileView onSignInButtonClickShow">
-        <div class="form">
-            <h1>Create Account</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-github"></i></a>
-                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your email for registration</span>
-            <div>
-                    <input class="inputBox" type="email" placeholder="Email:" />
-                    <input class="inputBox" type="text" placeholder="Name:" />
-                    <input data-language='en'  placeholder="DOB:" type='text' class="datepicker-here" data-position="top left"
-                     style="border : none; border-bottom :  1px solid #e6e3e3" /><br>
-                    <div style="text-align: left; width : 100%;font-weight: 100;color: #797979">
-                            &nbsp;&nbsp;&nbsp;Gender
-                    </div>
-<!--                     
-                    <div style="width : 100%;">
-                        <div style="width:45%; display: inline-block;">
-                            <input type='radio' name="gender"/>Male
-                        </div>
-                        <div style="width:50%; display: inline-block;">
-                            <input type='radio' name="gender"/>Female
-                        </div>
-                    </div> -->
-                    <input class="inputBox" type="text" placeholder="Experience(Yrs)" />
-                    <input class="inputBox" type="number" placeholder="Domain" />
-                    <input class="inputBox" type="password" placeholder="Password" />
-                    <input class="inputBox" type="password" placeholder="Confirm Password" />
-        
-            </div>
-            <button id="signup">Sign Up</button>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container mobileView onSignInButtonClickShow">
+            <div class="form">
 
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Create Account</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <span>or use your email for registration</span>
+                    </div>
+                </div>
+
+
+                <div class="row" style="border : 2px solid orange">
+                    <div class="col-12">
+                        <input class="inputBox" type="email" placeholder="Email:" />
+                    </div>
+                    <div class="col-12">
+                        <input class="inputBox" type="text" placeholder="Name:" />
+                    </div>
+                    <div class="col-12">
+                        <input data-language='en' placeholder="DOB:" type='text' class="datepicker-here"
+                            data-position="top left" style="border : none; border-bottom :  1px solid #e6e3e3" />
+                    </div>
+                    <div class="col-12">
+                        <div style="text-align: left; width : 100%;font-weight: 100;color: #797979">
+                            &nbsp;&nbsp;&nbsp;Gender
+                        </div>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="Male">
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="Female">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+
+                    <div class="col-12">
+                        <input class="inputBox" type="text" placeholder="Experience(Yrs)" />
+                    </div>
+                    <div class="col-12">
+                        <input class="inputBox" type="number" placeholder="Domain" />
+                    </div>
+                    <div class="col-12">
+                        <input class="inputBox" type="password" placeholder="Password" />
+                    </div>
+                    <div class="col-12">
+                        <input class="inputBox" type="password" placeholder="Confirm Password" />
+                    </div>
+
+                </div>
+
+                <div>
+
+                </div>
+                <button id="signup">Sign Up</button>
+
+            </div>
         </div>
-    </div>
-    <div class="form-container sign-in-container mobileView showOnSignIn">
-        <div class="form">
-            <h1>Sign in</h1>
-            <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-github"></i></a>
-                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <span>or use your account</span>
-            <input class="inputBox" id="email" type="email" placeholder="Email" />
-            <input class="inputBox" id="password" type="password" placeholder="Password" />
-            <a href="#">Forgot your password?</a>
-            <button id="signInButton" class="signIn">Sign In</button>
-            <div class="showOnMobile">
-                <p>
-                    Or
-                </p>
-                <button class="signUpButton">Sign Up</button>
+        <div class="form-container sign-in-container mobileView showOnSignIn">
+            <div class="form">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input class="inputBox" id="email" type="email" placeholder="Email" />
+                <input class="inputBox" id="password" type="password" placeholder="Password" />
+                <a href="Html/forgetPassword.html">Forgot your password?</a>
+                <button id="signInButton" class="signIn">Sign In</button>
+                <div class="showOnMobile">
+                    <p>
+                        Or
+                    </p>
+                    <button class="signUpButton">Sign Up</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="overlay-container mobileDisplayNone">
-        <div class="overlay">
-            <div style="position: absolute; left : 0; display: inline-block">
-                <img style="height: 100px;width: 100px;" src="Assets/whiteLogo.svg" alt="Quadro">
-            </div>
-            <div style="display: inline-block; position: absolute; left : 100px; line-height: 90px">
-                Quadro
-            </div>
-            <div class="overlay-panel overlay-left">
-                <h1>Create New Account</h1>
-                <!-- <p>To keep connected with us please login with your personal info</p> -->
-                <a style="margin-top:120px" href="forgetPassword.html">forget password?</a>  
-                <button style="margin-top:20px" class="ghost" id="signIn">Already have an account?</button>
-            </div>
-            
-            <div class="overlay-panel overlay-right">
-                <div style="position: absolute; left : 0;top:0; display: inline-block">
+        <div class="overlay-container mobileDisplayNone">
+            <div class="overlay" style="margin-top:-10px">
+                <div style="position: absolute; left : 0;top:5px; display: inline-block;margin-left:5px">
                     <img style="height: 100px;width: 100px;" src="Assets/whiteLogo.svg" alt="Quadro">
                 </div>
-                <div style="display: inline-block;top:0; position: absolute; left : 100px; line-height: 90px">
-                    Quadro
+                <!-- <div style="display: inline-block;top:0; position: absolute; left : 50px;top:5px; line-height: 100px">
+                &nbsp;Quadro
+            </div> -->
+                <div class="overlay-panel overlay-left">
+                    <h1>Create New Account</h1>
+                    <!-- <p>To keep connected with us please login with your personal info</p> -->
+                    <a style="margin-top:120px" href="Html/forgetPassword.html">forget password?</a>
+                    <button style="margin-top:20px" class="ghost" id="signIn">Already have an account?</button>
                 </div>
-                <h1>Hey, Welcome Back!</h1>
-                <a style="margin-top:120px" href="forgetPassword.html">forget password?</a>  
-                <!-- <p>Enter your personal details and start journey with us</p> -->
-                <button style="margin-top:20px" class="ghost" id="signUp">Create new account?</button>
+
+                <div class="overlay-panel overlay-right" style="margin-top:-10px">
+                    <div style="position: absolute; left : 0;top:5px; display: inline-block;margin-left:5px">
+                        <img style="height: 100px;width: 100px;" src="Assets/whiteLogo.svg" alt="Quadro">
+                    </div>
+                    <!-- <div style="display: inline-block;top:0; position: absolute;top:5px; left : 50px; line-height: 100px">
+                    &nbsp;Quadro
+                </div> -->
+                    <h1>Hey, Welcome Back!</h1>
+                    <a style="margin-top:120px" href="forgetPassword.html">forget password?</a>
+                    <!-- <p>Enter your personal details and start journey with us</p> -->
+                    <button style="margin-top:20px" class="ghost" id="signUp">Create new account?</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <script>
         $(document).ready(function () {
@@ -114,36 +155,36 @@
                 var password = $('#password').val();
                 console.log(email, password)
                 fetch("https://dscquadro.herokuapp.com/auth/login", {
-                method: "post",
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                //make sure to serialize your JSON body
-                body: JSON.stringify({
-                    email,
-                    password,
+                    method: "post",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    //make sure to serialize your JSON body
+                    body: JSON.stringify({
+                        email,
+                        password,
+                    })
                 })
-                })
-                .then( (response) => { 
-                    return response.json()
-                //do something awesome that makes the world a better place
-                })
-                .then( data => {
-                // let token = data.token;
-                console.log("hi get token from here",data.token);
-                sessionStorage.setItem("token", data.token)
-                if (data.token) {
-                    window.location.href = "homePage.html";
-                } else {
-                    console.log("Maa chuda")
-                }
-            })
-            
-            
+                    .then((response) => {
+                        return response.json()
+                        //do something awesome that makes the world a better place
+                    })
+                    .then(data => {
+                        // let token = data.token;
+                        console.log("hi get token from here", data.token);
+                        sessionStorage.setItem("token", data.token)
+                        if (data.token) {
+                            window.location.href = "Html/homePage.html";
+                        } else {
+                            console.log("Maa chuda")
+                        }
+                    })
+
+
                 // window.sessionStorage.accessToken = date.token;
             });
-            
+
             console.log("Hello")
             $('.signUpButton').click(function () {
                 console.log("Bye")
@@ -152,56 +193,56 @@
             });
 
             fetch("https://dscquadro.herokuapp.com/auth/signup", {
-            method: "post",
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            //make sure to serialize your JSON body
-            body: JSON.stringify({
-                name: "Purushottam Sharma",
-                email: "pmsharma3.00@gmail.com",
-                dob: "06/02/1999",
-                gender: "55",
-                password: "somePassword",
-                experience: 3,
-                domain: "Web technology",
+                method: "post",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                //make sure to serialize your JSON body
+                body: JSON.stringify({
+                    name: "Purushottam Sharma",
+                    email: "pmsharma3.00@gmail.com",
+                    dob: "06/02/1999",
+                    gender: "55",
+                    password: "somePassword",
+                    experience: 3,
+                    domain: "Web technology",
+                })
             })
-            })
-            .then( (response) => { 
-                return response.json()
-            //do something awesome that makes the world a better place
-            })
-            .then( data => console.log(data.message)) 
-            });
-
-            
+                .then((response) => {
+                    return response.json()
+                    //do something awesome that makes the world a better place
+                })
+                .then(data => console.log(data.message))
+        });
 
 
 
-               
+
+
+
     </script>
 
     <script>
-        
-            // Initialization
-            $('#my-element').datepicker([options])
-            // Access instance of plugin
-            $('#my-element').data('datepicker')
+
+        // Initialization
+        $('#my-element').datepicker([options])
+        // Access instance of plugin
+        $('#my-element').data('datepicker')
     </script>
 
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="Js/app.js"></script>
 </body>
 
 </html>

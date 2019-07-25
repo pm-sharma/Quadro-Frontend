@@ -83,6 +83,6 @@
         </g>
       </g>
     </g>
-    <text id="Quadro" transform="translate(116.308 41.408)" font-size="21" font-family="ProductSans-Bold, Product Sans" font-weight="700"><tspan x="-36.477" y="0">Quadro</tspan></text>
+    <text fill="white" id="Quadro" transform="translate(116.308 41.408)" font-size="21" font-family="ProductSans-Bold, Product Sans" font-weight="700"><tspan x="-36.477" y="0">Quadro</tspan></text>
   </g>
 </svg>
