@@ -45,47 +45,30 @@
                     </div>
                 </div>
 
-
-                <div class="row" style="border : 2px solid orange">
-                    <div class="col-12">
-                        <input class="inputBox" type="email" placeholder="Email:" />
-                    </div>
-                    <div class="col-12">
-                        <input class="inputBox" type="text" placeholder="Name:" />
-                    </div>
-                    <div class="col-12">
-                        <input data-language='en' placeholder="DOB:" type='text' class="datepicker-here"
+                <div class="row">
+                        <input class="inputBox" id="emailSignUp" type="email" placeholder="Email:" />
+          
+                        <input class="inputBox" id="nameSignUp" type="text" placeholder="Name:" />
+          
+                        <input id="dobSignUp" data-language='en' placeholder="DOB:" type='text' class="datepicker-here"
                             data-position="top left" style="border : none; border-bottom :  1px solid #e6e3e3" />
-                    </div>
-                    <div class="col-12">
-                        <div style="text-align: left; width : 100%;font-weight: 100;color: #797979">
+          
+                        <div style="text-align: left; width : 100%;font-weight: 100;color: #797979;margin-top: 3px">
                             &nbsp;&nbsp;&nbsp;Gender
                         </div>
-                    </div>
 
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="Male">
-                        <label class="form-check-label" for="inlineRadio1">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="Female">
-                        <label class="form-check-label" for="inlineRadio2">Female</label>
-                    </div>
+                        <div style="text-align: left;margin-top:8px;margin-left:3px">
+                            <select id="gender"  style="width: 100%;height: 30px;border: none;border-bottom: 1px solid #e6e3e3; background : white;outline: none; border-radius : 0" name="Gender">
+                                <option value="Male" selected>Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
 
-                    <div class="col-12">
-                        <input class="inputBox" type="text" placeholder="Experience(Yrs)" />
-                    </div>
-                    <div class="col-12">
-                        <input class="inputBox" type="number" placeholder="Domain" />
-                    </div>
-                    <div class="col-12">
-                        <input class="inputBox" type="password" placeholder="Password" />
-                    </div>
-                    <div class="col-12">
-                        <input class="inputBox" type="password" placeholder="Confirm Password" />
-                    </div>
+                        <input class="inputBox" type="number" placeholder="Experience(Yrs)" />
+         
+                        <input id="domainSignUp" class="inputBox" type="text" placeholder="Domain" />
+                        <input id="passwordSignUp" class="inputBox" type="password" placeholder="Password" />
+                        <input id="conformPassword" class="inputBox" type="password" placeholder="Confirm Password" />
 
                 </div>
 
@@ -118,7 +101,7 @@
             </div>
         </div>
         <div class="overlay-container mobileDisplayNone">
-            <div class="overlay" style="margin-top:-10px">
+            <div class="overlay">
                 <div style="position: absolute; left : 0;top:5px; display: inline-block;margin-left:5px">
                     <img style="height: 100px;width: 100px;" src="Assets/whiteLogo.svg" alt="Quadro">
                 </div>
@@ -132,7 +115,7 @@
                     <button style="margin-top:20px" class="ghost" id="signIn">Already have an account?</button>
                 </div>
 
-                <div class="overlay-panel overlay-right" style="margin-top:-10px">
+                <div class="overlay-panel overlay-right">
                     <div style="position: absolute; left : 0;top:5px; display: inline-block;margin-left:5px">
                         <img style="height: 100px;width: 100px;" src="Assets/whiteLogo.svg" alt="Quadro">
                     </div>

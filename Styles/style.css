@@ -226,34 +226,6 @@ button.ghost {
 ::placeholder{
     font-size: 15px
 }
-/* Radio Button Styles */
-input[type='radio']:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #d1d3d1;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-}
-
-input[type='radio']:checked:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #ffa500;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid white;
-}
 
 
 /* Login SignUp for mobile */ 
@@ -309,4 +281,27 @@ input[type='radio']:checked:after {
 
 .maxWidth{
     max-width: 140px
+}
+
+/* change media quereis if required */
+
+
+@media (max-width : 990px) {
+    .radio-span {
+        display : inline-block;
+        transform: translate(-100%,-90%)
+    }
+    .radio-input {
+        transform: translateY(50%)
+    }
+}
+
+@media (min-width : 991px) {
+    .radio-span {
+        display : inline-block;
+        transform: translate(-100%,-90%)
+    }
+    .radio-input {
+        transform: translateY(50%)
+    }
 }
