@@ -258,6 +258,9 @@ button.ghost {
     .positionFix{
         margin-top:30px;
     }
+    #marginTopForSmallDevices{
+        margin-top:190px
+    }
 }
 
 .inputBox{

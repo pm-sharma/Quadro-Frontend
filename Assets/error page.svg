@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-error_page">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="error_page" data-name="error page" clip-path="url(#clip-error_page)">
+    <rect width="1920" height="1080" fill="#fff"/>
+    <rect id="Rectangle_74" data-name="Rectangle 74" width="116" height="23" transform="translate(918 821)" fill="#327744"/>
+    <path id="Path_71" data-name="Path 71" d="M186.81,476.03,1371.7-677.79l210.683,36.566L573.621,1117.208Z" transform="translate(-186.589 603)" fill="#f6c331" opacity="0.15"/>
+    <path id="Path_66" data-name="Path 66" d="M558.032-201.154H455.847L410-162.274l45.846,39.751H558.032Z" transform="translate(408 826.918)" fill="#f6c331"/>
+    <path id="Path_64" data-name="Path 64" d="M560.755-248.577v53.684h87.66l26.428-26.733-26.428-26.951Z" transform="translate(427.901 820.657)" fill="#e96357"/>
+    <path id="Path_65" data-name="Path 65" d="M553.4-283.192v39.751H471.544l-26.428-20.333,24.12-19.418Z" transform="translate(420.721 816.088)" fill="#6297f0"/>
+    <path id="Path_62" data-name="Path 62" d="M538.655,32.11V-289.915l12.22-27.74,12.715,27.74V32.11Z" transform="translate(424.984 782.663)" fill="#707070"/>
+    <path id="Path_67" data-name="Path 67" d="M562.875-342.926,561.8,6.342H575.95V-315.726Z" transform="translate(412.712 807.933)" opacity="0.25"/>
+    <path id="Path_68" data-name="Path 68" d="M482.678-83.239l-41.7-66.07,41.7,33.774v-33.774l18.886,33.774,12.665-33.774v33.774L548-149.309l-33.774,66.07Z" transform="translate(432.439 926.888)" fill="#327744"/>
+    <path id="Path_69" data-name="Path 69" d="M482.678-83.239l-41.7-66.07,41.7,33.774v-33.774l18.886,33.774,12.665-33.774v33.774L548-149.309l-33.774,66.07Z" transform="translate(523.686 926.888)" fill="#327744"/>
+    <path id="Path_70" data-name="Path 70" d="M482.678-83.239l-41.7-66.07,41.7,33.774v-33.774l18.886,33.774,12.665-33.774v33.774L548-149.309l-33.774,66.07Z" transform="translate(477.485 926.888)" fill="#57b36f"/>
+    <ellipse id="Ellipse_47" data-name="Ellipse 47" cx="10.973" cy="10.395" rx="10.973" ry="10.395" transform="translate(921.953 663.587)" fill="#fff"/>
+    <ellipse id="Ellipse_48" data-name="Ellipse 48" cx="8.663" cy="8.085" rx="8.663" ry="8.085" transform="translate(1008.58 588.51)" fill="#fff"/>
+    <ellipse id="Ellipse_49" data-name="Ellipse 49" cx="8.663" cy="8.085" rx="8.663" ry="8.085" transform="translate(921.953 542.309)" fill="#fff"/>
+    <text id="_404_Unexpected_error_has_occurred_" data-name="404
+Unexpected error
+has occurred!" transform="translate(976.302 307)" font-size="90" font-family="ProductSans-Regular, Product Sans"><tspan x="-81.72" y="0">404</tspan><tspan font-size="25" font-family="ProductSans-Bold, Product Sans" font-weight="700"><tspan x="-101.125" y="47">Unexpected error</tspan><tspan x="-78.138" y="77">has occurred!</tspan></tspan></text>
+  </g>
+</svg>
