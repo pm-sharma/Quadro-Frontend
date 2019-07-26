@@ -135,16 +135,17 @@
     height : 10px;
     width : 10px;
     border-radius : 50%;
-    border:  2px solid black;
 }
 
 .connect {
     border-radius : 25px;
     min-width : 90px;
     background: #EB7167;
+    outline: none;
     color : white;
     border : none;
-    outline : none;
+    cursor: pointer;
+    outline-style : none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom : 20px
 }
@@ -158,4 +159,13 @@
     width : 70px;
     border-radius : 50%;
     border:  2px solid black;
+}
+
+
+
+button, button:focus {
+    outline: none;
+    border: 0;
+    cursor: pointer;
+
 }
