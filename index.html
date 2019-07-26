@@ -46,9 +46,9 @@
                 </div>
 
                 <div class="row">
-                        <input class="inputBox" id="emailSignUp" type="email" placeholder="Email:" />
+                        <input onclick="emailVerify(event)" class="inputBox" id="emailSignUp" type="email" placeholder="Email:" />
           
-                        <input class="inputBox" id="nameSignUp" type="text" placeholder="Name:" />
+                        <input onclick="nameValidate(event)" class="inputBox" id="nameSignUp" type="text" placeholder="Name:" />
           
                         <input id="dobSignUp" data-language='en' placeholder="DOB:" type='text' class="datepicker-here"
                             data-position="top left" style="border : none; border-bottom :  1px solid #e6e3e3" />
@@ -67,8 +67,8 @@
                         <input class="inputBox" type="number" placeholder="Experience(Yrs)" />
          
                         <input id="domainSignUp" class="inputBox" type="text" placeholder="Domain" />
-                        <input id="passwordSignUp" class="inputBox" type="password" placeholder="Password" />
-                        <input id="conformPassword" class="inputBox" type="password" placeholder="Confirm Password" />
+                        <input onclick="verifyPassword(event)" id="passwordSignUp" class="inputBox" type="password" placeholder="Password" />
+                        <input onclick="matchPassword(event)" id="conformPassword" class="inputBox" type="password" placeholder="Confirm Password" />
 
                 </div>
 
@@ -88,8 +88,8 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input class="inputBox" id="email" type="email" placeholder="Email" />
-                <input class="inputBox" id="password" type="password" placeholder="Password" />
+                <input onclick="emailVerify(event)" class="inputBox" id="email" type="email" placeholder="Email" />
+                <input onclick="verifyPassword(event)" class="inputBox" id="password" type="password" placeholder="Password" />
                 <a href="Html/forgetPassword.html">Forgot your password?</a>
                 <button id="signInButton" class="signIn">Sign In</button>
                 <div class="showOnMobile">
@@ -134,8 +134,10 @@
     <script>
         $(document).ready(function () {
             $('#signInButton').click(function () {
+
                 var email = $('#email').val();
                 var password = $('#password').val();
+
                 console.log(email, password)
                 fetch("https://dscquadro.herokuapp.com/auth/login", {
                     method: "post",
@@ -167,6 +169,10 @@
 
                 // window.sessionStorage.accessToken = date.token;
             });
+
+
+
+
 
             console.log("Hello")
             $('.signUpButton').click(function () {

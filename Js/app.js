@@ -64,7 +64,7 @@ function verifyPassword(event) {
 }
 
 function matchPassword(event) {
-    let pw = document.getElementById("password").value;
+    let pw = document.getElementById("passwordSignUp").value;
     if (event.target == undefined){
         if (event == pw){
             return true
@@ -123,24 +123,6 @@ function nameValidate(event) {
     }
 } 
 
-function countryValidate() {
-    if (document.getElementById("country").selectedIndex == 0){
-        return false
-    }
-    else {
-        return true
-    }
-} 
-
-
-function stateValidate() {
-    if (document.getElementById("state").selectedIndex == 0){
-        return false
-    }
-    else {
-        return true
-    }
-} 
 
 function validation() {
     let status = [];
@@ -180,26 +162,6 @@ function validation() {
         lastName.style.borderColor = "red";
         lastName.placeholder = "You cannot leave this field empty"
     }
-    //country
-    if (countryValidate()){
-        status.push("true");
-    }
-    else{
-        status.push("false");
-        let country = document.getElementById("country");
-        country.classList.add("red");
-        country.style.borderColor = "red";
-    }
-    //state
-    if (stateValidate()){
-        status.push("true");
-    }
-    else{
-        status.push("false");
-        let state = document.getElementById("state");
-        state.classList.add("red");
-        state.style.borderColor = "red";
-    }
     //password
     if (verifyPassword(document.getElementById("password").value)){
         status.push("true");
@@ -223,18 +185,6 @@ function validation() {
         confPassword.value = "";
         confPassword.style.borderColor = "red";
         confPassword.placeholder = "The password and confirm password field does not matches"
-    }
-    //phoneNumber
-    if (verifyPhoneNumber(document.getElementById("phoneNumber").value)){
-        status.push("true");
-    }
-    else{
-        status.push("false");
-        let phoneNumber = document.getElementById("phoneNumber");
-        phoneNumber.classList.add("red");
-        phoneNumber.value = "";
-        phoneNumber.style.borderColor = "red";
-        phoneNumber.placeholder = "You cannot leave this field empty"
     }
     if (status.includes("false")){
         return false 

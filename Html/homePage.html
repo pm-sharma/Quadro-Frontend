@@ -85,7 +85,7 @@
 
     <div class="row" id="cards" style="background-color: #F4F4F4;padding: 40px">
 
-    
+
     </div>
 
 
@@ -188,106 +188,106 @@
         })
 
       data.then(arr => {
-          makeCard(arr.data);
+        makeCard(arr.data);
       })
     }
 
     function makeCard(data) {
-            data.forEach( ele => {
+      data.forEach(ele => {
 
-                let divTop = document.createElement("div");
-                divTop.setAttribute("style", "padding : 10px");
-                divTop.setAttribute("class", "col-12 col-md-6 col-lg-4");
+        let divTop = document.createElement("div");
+        divTop.setAttribute("style", "padding : 10px");
+        divTop.setAttribute("class", "col-12 col-md-6 col-lg-4");
 
-                    let divTopCover = document.createElement("div");
-                    divTopCover.setAttribute("style", "background-color: #FFFFFF;border-radius: 10px;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.2); padding : 20px");
+        let divTopCover = document.createElement("div");
+        divTopCover.setAttribute("style", "background-color: #FFFFFF;border-radius: 10px;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.2); padding : 20px");
 
-                        let divRowOne = document.createElement("div");
-                        divRowOne.setAttribute("class", "row");
+        let divRowOne = document.createElement("div");
+        divRowOne.setAttribute("class", "row");
 
-                            let oneCol6a = document.createElement("div");
-                            oneCol6a.setAttribute("class", "col-6");
-                            oneCol6a.setAttribute("style", "text-align : center")
+        let oneCol6a = document.createElement("div");
+        oneCol6a.setAttribute("class", "col-6");
+        oneCol6a.setAttribute("style", "text-align : center")
 
-                                let avail = document.createElement("div");
-                                avail.setAttribute("class", "circle")
+        let avail = document.createElement("div");
+        avail.setAttribute("class", "circle")
 
-                                if (ele.AVAILABLE == true){
-                                  avail.setAttribute("style", "background-color : green");
-                                  oneCol6a.appendChild(avail)
-                                } else {
-                                  avail.setAttribute("style", "background-color : red");
-                                  oneCol6a.appendChild(avail)            
-                                }
-                                
-
-                            let oneCol6b = document.createElement("div");
-                            oneCol6b.setAttribute("class", "col-6");
-                            oneCol6b.setAttribute("style", "text-align : center")
-
-                                let btn = document.createElement("button");
-                                btn.setAttribute("class", "connect")
-
-                                let btnText = document.createTextNode("Connect")
-                                btn.appendChild(btnText)
-                                oneCol6b.appendChild(btn)
-                            
-                                divRowOne.appendChild(oneCol6a);
-                                divRowOne.appendChild(oneCol6b);
-
-                                divTopCover.appendChild(divRowOne);
-                                
-
-                        let divRowTwo = document.createElement("div");
-                        divRowTwo.setAttribute("class", "row");
-
-                            let col4 = document.createElement("div");
-                            col4.setAttribute("class", "col-4")
-
-                                let avatar = document.createElement("div");
-                                avatar.setAttribute("class", "avatar");
-
-                                col4.appendChild(avatar)
-                                divRowTwo.appendChild(col4)
-
-                            let col8 = document.createElement("div")
-                            col8.setAttribute("class", "col-8")
-
-                                let name = document.createElement("div")
-                                name.setAttribute("style", "padding : 10px 15px")
-                                let nameHead = document.createTextNode("Name : " + ele.NAME)
-                                name.appendChild(nameHead)
-
-
-                                let age = document.createElement("div")
-                                age.setAttribute("style", "padding : 10px 15px")
-                                let ageHead = document.createTextNode("Age : "  + ele.DOB)
-                                age.appendChild(ageHead)
-
-                                let desc = document.createElement("div")
-                                desc.setAttribute("style", "padding : 10px 15px")
-                                let descHead = document.createTextNode("Description : " + ele.DESCRIPTION)
-                                desc.appendChild(descHead)
-
-                                col8.appendChild(name)
-                                col8.appendChild(age)
-                                col8.appendChild(desc)
-
-                            divRowTwo.appendChild(col8)
-                            divTopCover.appendChild(divRowTwo);
-
-                            
-                        // add at last 
-                        divTop.appendChild(divTopCover);
-
-
-                        document.getElementById("cards").appendChild(divTop)
-
-                        
-
-
-            })
+        if (ele.AVAILABLE == true) {
+          avail.setAttribute("style", "background-color : green");
+          oneCol6a.appendChild(avail)
+        } else {
+          avail.setAttribute("style", "background-color : red");
+          oneCol6a.appendChild(avail)
         }
+
+
+        let oneCol6b = document.createElement("div");
+        oneCol6b.setAttribute("class", "col-6");
+        oneCol6b.setAttribute("style", "text-align : center")
+
+        let btn = document.createElement("button");
+        btn.setAttribute("class", "connect")
+
+        let btnText = document.createTextNode("Connect")
+        btn.appendChild(btnText)
+        oneCol6b.appendChild(btn)
+
+        divRowOne.appendChild(oneCol6a);
+        divRowOne.appendChild(oneCol6b);
+
+        divTopCover.appendChild(divRowOne);
+
+
+        let divRowTwo = document.createElement("div");
+        divRowTwo.setAttribute("class", "row");
+
+        let col4 = document.createElement("div");
+        col4.setAttribute("class", "col-4")
+
+        let avatar = document.createElement("div");
+        avatar.setAttribute("class", "avatar");
+
+        col4.appendChild(avatar)
+        divRowTwo.appendChild(col4)
+
+        let col8 = document.createElement("div")
+        col8.setAttribute("class", "col-8")
+
+        let name = document.createElement("div")
+        name.setAttribute("style", "padding : 10px 15px")
+        let nameHead = document.createTextNode("Name : " + ele.NAME)
+        name.appendChild(nameHead)
+
+
+        let age = document.createElement("div")
+        age.setAttribute("style", "padding : 10px 15px")
+        let ageHead = document.createTextNode("Age : " + ele.DOB)
+        age.appendChild(ageHead)
+
+        let desc = document.createElement("div")
+        desc.setAttribute("style", "padding : 10px 15px")
+        let descHead = document.createTextNode("Description : " + ele.DESCRIPTION)
+        desc.appendChild(descHead)
+
+        col8.appendChild(name)
+        col8.appendChild(age)
+        col8.appendChild(desc)
+
+        divRowTwo.appendChild(col8)
+        divTopCover.appendChild(divRowTwo);
+
+
+        // add at last 
+        divTop.appendChild(divTopCover);
+
+
+        document.getElementById("cards").appendChild(divTop)
+
+
+
+
+      })
+    }
 
 
     // $('.dropdown-toggle').click(function () {
@@ -323,7 +323,7 @@
     // });
   </script>
 
-  
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
