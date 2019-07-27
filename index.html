@@ -46,29 +46,24 @@
                 </div>
 
                 <div class="row">
-                        <input onclick="emailVerify(event)" class="inputBox" id="emailSignUp" type="email" placeholder="Email:" />
-          
-                        <input onclick="nameValidate(event)" class="inputBox" id="nameSignUp" type="text" placeholder="Name:" />
-          
-                        <input id="dobSignUp" data-language='en' placeholder="DOB:" type='text' class="datepicker-here"
-                            data-position="top left" style="border : none; border-bottom :  1px solid #e6e3e3" />
-          
-                        <div style="text-align: left; width : 100%;font-weight: 100;color: #797979;margin-top: 3px">
-                            &nbsp;&nbsp;&nbsp;Gender
-                        </div>
 
-                        <div style="text-align: left;margin-top:8px;margin-left:3px">
-                            <select id="gender"  style="width: 100%;height: 30px;border: none;border-bottom: 1px solid #e6e3e3; background : white;outline: none; border-radius : 0" name="Gender">
-                                <option value="Male" selected>Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                        </div>
-
-                        <input class="inputBox" type="number" placeholder="Experience(Yrs)" />
-         
-                        <input id="domainSignUp" class="inputBox" type="text" placeholder="Domain" />
-                        <input onclick="verifyPassword(event)" id="passwordSignUp" class="inputBox" type="password" placeholder="Password" />
-                        <input onclick="matchPassword(event)" id="conformPassword" class="inputBox" type="password" placeholder="Confirm Password" />
+                    <input onclick="nameValidate(event)" class="inputBox" id="nameSignUp" type="text" placeholder="Name:" />
+                    <input onclick="emailVerify(event)" class="inputBox" id="emailSignUp" type="email" placeholder="Email:" />
+                    <input id="dobSignUp" data-language='en' placeholder="DOB:" type='text' class="datepicker-here"
+                        data-position="top left" style="border : none; border-bottom :  1px solid #e6e3e3" />
+                    <div style="text-align: left; width : 100%;font-weight: 100;color: #797979;margin-top: 3px">
+                        &nbsp;&nbsp;&nbsp;Gender:
+                    </div>
+                    <div style="text-align: left;margin-top:8px;margin-left:3px">
+                        <select id="genderSignUp"  style="width: 100%;height: 30px;border: none;border-bottom: 1px solid #e6e3e3; background : white;outline: none; border-radius : 0" name="Gender">
+                            <option value="Male" selected>Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <input id="experienceSignUp" class="inputBox" type="number" placeholder="Experience(Yrs)" />
+                    <input id="domainSignUp" class="inputBox" type="text" placeholder="Domain" />
+                    <input onclick="verifyPassword(event)" id="passwordSignUp" class="inputBox" type="password" placeholder="Password" />
+                    <input onclick="matchPassword(event)" id="conformPassword" class="inputBox" type="password" placeholder="Confirm Password" />
 
                 </div>
 
@@ -176,35 +171,51 @@
 
             console.log("Hello")
             $('.signUpButton').click(function () {
+
                 console.log("Bye")
                 $('.showOnSignIn').css("display", "none");
                 $('.onSignInButtonClickShow').css("display", "block");
             });
 
+
+            $('#signup').click(function () {
+                console.log("hey sign me up")
+                var email = $('#emailSignUp').val();
+                var name = $('#nameSignUp').val();
+                var dob = $('#dobSignUp').val();
+                var gender = $('#genderSignUp').val();
+                var experience = $('#experienceSignUp').val();
+                var domain = $('#domainSignUp').val();
+                var password = $('#passwordSignUp').val();
             fetch("https://dscquadro.herokuapp.com/auth/signup", {
+
                 method: "post",
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
+                
                 //make sure to serialize your JSON body
                 body: JSON.stringify({
-                    name: "Purushottam Sharma",
-                    email: "pmsharma3.00@gmail.com",
-                    dob: "06/02/1999",
-                    gender: "55",
-                    password: "somePassword",
-                    experience: 3,
-                    domain: "Web technology",
+                    name,
+                    email,
+                    dob,
+                    gender,
+                    password,
+                    experience,
+                    domain,
                 })
             })
                 .then((response) => {
                     return response.json()
+                    console.log("hey sign me2 up");
+
                     //do something awesome that makes the world a better place
                 })
-                .then(data => console.log(data.message))
+                .then(data => console.log("ghnjk",data.message))
         });
 
+    });
 
 
 
@@ -213,11 +224,13 @@
     </script>
 
     <script>
+        $(document).ready(function () {
+                    // Initialization
+                        $('#my-element').datepicker([options])
+                        // Access instance of plugin
+                        $('#my-element').data('datepicker')
 
-        // Initialization
-        $('#my-element').datepicker([options])
-        // Access instance of plugin
-        $('#my-element').data('datepicker')
+        });
     </script>
 
 

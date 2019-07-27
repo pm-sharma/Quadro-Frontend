@@ -201,18 +201,18 @@ function fieldReset(event){
 
 
 
-document.getElementsByClassName("non-btn")[0].addEventListener('click', (event) => {
-    document.getElementById("signup").style.display = "none";
-    document.getElementById("login").style.display = "block";
-})
+// document.getElementsByClassName("non-btn")[0].addEventListener('click', (event) => {
+//     document.getElementById("signup").style.display = "none";
+//     document.getElementById("login").style.display = "block";
+// })
 
-document.getElementsByClassName("non-btn")[1].addEventListener('click', (event) => {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("signup").style.display = "block";
-})
+// document.getElementsByClassName("non-btn")[1].addEventListener('click', (event) => {
+//     document.getElementById("login").style.display = "none";
+//     document.getElementById("signup").style.display = "block";
+// })
 
-document.getElementsByClassName("btn")[0].addEventListener("click", (e) => {
-    if (validation()){
-        document.getElementsByTagName("form")[0].submit();
-    }
-} )
+// document.getElementsByClassName("btn")[0].addEventListener("click", (e) => {
+//     if (validation()){
+//         document.getElementsByTagName("form")[0].submit();
+//     }
+// } )
