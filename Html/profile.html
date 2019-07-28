@@ -123,7 +123,39 @@
         });
     </script>
 
-    <script>
+
+<script>
+        $(document).ready(function () {
+
+                console.log(email, password)
+                fetch("https://dscquadro.herokuapp.com/auth/update", {
+                    method: "post",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    //make sure to serialize your JSON body
+                    body: JSON.stringify({
+                        
+                    })
+                })
+                    .then((response) => {
+                        return response.json()
+                        //do something awesome that makes the world a better place
+                    })
+                    .then(data => {
+                        // let token = data.token;
+                        console.log("hi get token from here", data.token);
+                        sessionStorage.setItem("token", data.token)
+                        if (data.token) {
+                            window.location.href = "Html/homePage.html";
+                        } else {
+                            console.log("Maa chuda")
+                        }
+                    })
+
+        });
+
 
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

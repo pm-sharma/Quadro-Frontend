@@ -103,20 +103,28 @@
           <h5 class="mb-0">
             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
               aria-expanded="true" aria-controls="collapseOne">
-              Input 1
+              Select and Enter the filter value
             </button>
           </h5>
         </div>
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
           <div class="card-body">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati ab ipsum ullam ex, magnam possimus
-            aspernatur vero quibusdam eveniet qui praesentium, perspiciatis nisi corrupti, tempora fugit accusantium
-            tempore dolores cum?
+            <select id="select" style="width: 260px;height: 38px;">
+              <option value="DOMAIN">Domain</option>
+              <option value="EXPERIENCE">Experience</option>
+              <option value="GENDER">Gender</option>
+              <option value="NAME">Name</option>
+              <option value="EMAIL">Email</option>
+              <option value="AGE">Age</option>
+            </select><br><br>
+            <input id="value" style="width: 260px;height: 38px;" type="text" placeholder="Type here" />
           </div>
         </div>
       </div>
-      <div class="card">
+
+      <button id="btn-filter">Filter</button>
+      <!-- <div class="card">
         <div class="card-header" id="headingTwo">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
@@ -132,7 +140,7 @@
             hainntium id
             ipsam inventore! </div>
         </div>
-      </div>
+      </div> -->
       <div class="card">
         <div class="card-header" id="headingThree">
           <h5 class="mb-0">
@@ -169,7 +177,39 @@
 
   <!-- https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query={} -->
   <script>
-    console.log("bitch")
+    // filter query
+
+    document.getElementById("btn-filter").addEventListener("click", (e) => {
+      let query = {}
+      let select = document.getElementById("select").value
+      let input = document.getElementById("value").value
+      console.log(select, input)
+      query[select] = {
+        $regex: input,
+        $options: "i"
+      }
+      console.log(query)
+      query = JSON.stringify(query)
+
+      fetch("https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query=" + query, {
+        method: "get",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE1NjEyNDgyMTl9.72ssLjjKFhNEX397D0IVlZDem33joyg51FSP9LKR42E'
+        },
+      })
+        .then((response) => {
+          return response.json()
+        })
+        .then(data => {
+          console.log(data)
+          console.log(data.data)
+          document.getElementById("cards").innerHTML = "";
+          makeCard(data.data);
+        })
+    })
+
 
     window.onload = () => {
       let data = fetch(`https://dscquadro.herokuapp.com/secure/filterdata?sort=-_id&limit=10&query={}`, {
@@ -188,30 +228,25 @@
         })
 
       data.then(arr => {
+        console.log(arr)
         makeCard(arr.data);
       })
     }
 
     function makeCard(data) {
       data.forEach(ele => {
-
         let divTop = document.createElement("div");
         divTop.setAttribute("style", "padding : 10px");
         divTop.setAttribute("class", "col-12 col-md-6 col-lg-4");
-
         let divTopCover = document.createElement("div");
         divTopCover.setAttribute("style", "background-color: #FFFFFF;border-radius: 10px;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.2); padding : 20px");
-
         let divRowOne = document.createElement("div");
         divRowOne.setAttribute("class", "row");
-
         let oneCol6a = document.createElement("div");
         oneCol6a.setAttribute("class", "col-6");
         oneCol6a.setAttribute("style", "text-align : center")
-
         let avail = document.createElement("div");
         avail.setAttribute("class", "circle")
-
         if (ele.AVAILABLE == true) {
           avail.setAttribute("style", "background-color : green");
           oneCol6a.appendChild(avail)
@@ -219,72 +254,47 @@
           avail.setAttribute("style", "background-color : red");
           oneCol6a.appendChild(avail)
         }
-
-
         let oneCol6b = document.createElement("div");
         oneCol6b.setAttribute("class", "col-6");
         oneCol6b.setAttribute("style", "text-align : center")
-
         let btn = document.createElement("button");
         btn.setAttribute("class", "connect")
-
         let btnText = document.createTextNode("Connect")
         btn.appendChild(btnText)
         oneCol6b.appendChild(btn)
-
         divRowOne.appendChild(oneCol6a);
         divRowOne.appendChild(oneCol6b);
-
         divTopCover.appendChild(divRowOne);
-
-
         let divRowTwo = document.createElement("div");
         divRowTwo.setAttribute("class", "row");
-
         let col4 = document.createElement("div");
         col4.setAttribute("class", "col-4")
-
         let avatar = document.createElement("div");
         avatar.setAttribute("class", "avatar");
-
         col4.appendChild(avatar)
         divRowTwo.appendChild(col4)
-
         let col8 = document.createElement("div")
         col8.setAttribute("class", "col-8")
-
         let name = document.createElement("div")
         name.setAttribute("style", "padding : 10px 15px")
         let nameHead = document.createTextNode("Name : " + ele.NAME)
         name.appendChild(nameHead)
-
-
         let age = document.createElement("div")
         age.setAttribute("style", "padding : 10px 15px")
         let ageHead = document.createTextNode("Age : " + ele.DOB)
         age.appendChild(ageHead)
-
         let desc = document.createElement("div")
         desc.setAttribute("style", "padding : 10px 15px")
         let descHead = document.createTextNode("Description : " + ele.DESCRIPTION)
         desc.appendChild(descHead)
-
         col8.appendChild(name)
         col8.appendChild(age)
         col8.appendChild(desc)
-
         divRowTwo.appendChild(col8)
         divTopCover.appendChild(divRowTwo);
-
-
         // add at last 
         divTop.appendChild(divTopCover);
-
-
         document.getElementById("cards").appendChild(divTop)
-
-
-
 
       })
     }
@@ -321,6 +331,9 @@
     //     })
     //     .then(data => console.log(data))
     // });
+
+
+
   </script>
 
 

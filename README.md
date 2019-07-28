@@ -40,8 +40,8 @@ $ node api
 
 <br> -->
 
-<!-- #### Contributors
+#### Contributors
 
 <a href="https://github.com/pm-sharma/Quadro-Frontend/graphs/contributors">
   <img src="https://contributors-img.firebaseapp.com/image?repo=pm-sharma/Quadro-Frontend" />
-</a> -->
+</a>
