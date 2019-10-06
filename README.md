@@ -1,6 +1,6 @@
 # Quadro-Frontend
 
-Summer Project 
+### Quadro, an application which helps developers all around the globe to connect with each other. But its a bit different, You have a project, come to Quadro and connect to the developers you need in your Project. Suppose you are a Backend Developer, And you want a Frontend Developer as well as a Mobile App Developer. Open Quadro and search for developers of your choice,  know their work experiance and ratings given by other developers. Shortlist them and approach then. You even get to know about their availability status. It will be developed in both the platforms,ie a website and a moblie App.
 
 <br>
 
