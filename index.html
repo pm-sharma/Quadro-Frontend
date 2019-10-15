@@ -8,15 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="Styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css"
-        crossorigin="anonymous">
-    <!-- Include English language -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>login logout</title>
+  
 </head>
 
 
@@ -46,9 +42,10 @@
                 </div>
 
                 <div class="row">
-
-                    <input onclick="nameValidate(event)" class="inputBox" id="nameSignUp" type="text" placeholder="Name:" />
-                    <input onclick="emailVerify(event)" class="inputBox" id="emailSignUp" type="email" placeholder="Email:" />
+                    <!-- <input autocomplete="rutjfkde" onfocus="fieldReset(event)" type='text' data-language='en' class="datepicker-here" data-position="top left"
+                    id="dob" name=""> -->
+                    <input onnput="nameValidate(event)" class="inputBox" id="nameSignUp" type="text" placeholder="Name:" />
+                    <input oninput="emailVerify(event)" class="inputBox" id="emailSignUp" type="email" placeholder="Email:" />
                     <input id="dobSignUp" data-language='en' placeholder="DOB:" type='text' class="datepicker-here"
                         data-position="top left" style="border : none; border-bottom :  1px solid #e6e3e3" />
                     <div style="text-align: left; width : 100%;font-weight: 100;color: #797979;margin-top: 3px">
@@ -62,8 +59,8 @@
                     </div>
                     <input id="experienceSignUp" class="inputBox" type="number" placeholder="Experience(Yrs)" />
                     <input id="domainSignUp" class="inputBox" type="text" placeholder="Domain" />
-                    <input onclick="verifyPassword(event)" id="passwordSignUp" class="inputBox" type="password" placeholder="Password" />
-                    <input onclick="matchPassword(event)" id="conformPassword" class="inputBox" type="password" placeholder="Confirm Password" />
+                    <input oninput="verifyPassword(event)" id="passwordSignUp" class="inputBox" type="password" placeholder="Password" />
+                    <input oninput="matchPassword(event)" id="conformPassword" class="inputBox" type="password" placeholder="Confirm Password" />
 
                 </div>
 
@@ -83,8 +80,8 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input onclick="emailVerify(event)" class="inputBox" id="email" type="email" placeholder="Email" />
-                <input onclick="verifyPassword(event)" class="inputBox" id="password" type="password" placeholder="Password" />
+                <input oninput="emailVerify(event)" class="inputBox" id="email" type="email" placeholder="Email" />
+                <input oninput="verifyPassword(event)" class="inputBox" id="password" type="password" placeholder="Password" />
                 <a href="Html/forgetPassword.html">Forgot your password?</a>
                 <button id="signInButton" class="signIn">Sign In</button>
                 <div class="showOnMobile">
@@ -95,6 +92,7 @@
                 </div>
             </div>
         </div>
+
         <div class="overlay-container mobileDisplayNone">
             <div class="overlay">
                 <div style="position: absolute; left : 0;top:5px; display: inline-block;margin-left:5px">
@@ -133,7 +131,21 @@
                 var email = $('#email').val();
                 var password = $('#password').val();
 
-                console.log(email, password)
+                let status = [];
+
+                if (password < 6){
+                    status.push("false");
+                    document.getElementById("password").style.borderColor = "red";
+                    document.getElementById("password").placeholder = "Please enter valid input";
+                } else {
+                    status.push("true");
+                }
+
+
+                if(status.includes("false")){
+                    return false
+                } else {
+                // fetch call
                 fetch("https://dscquadro.herokuapp.com/auth/login", {
                     method: "post",
                     headers: {
@@ -161,8 +173,7 @@
                         }
                     })
 
-
-                // window.sessionStorage.accessToken = date.token;
+                }
             });
 
 
@@ -223,17 +234,7 @@
 
     </script>
 
-    <script>
-        $(document).ready(function () {
-                    // Initialization
-                        $('#my-element').datepicker([options])
-                        // Access instance of plugin
-                        $('#my-element').data('datepicker')
-
-        });
-    </script>
-
-
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

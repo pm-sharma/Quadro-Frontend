@@ -14,7 +14,7 @@ signInBtn.addEventListener('click', () => {
 
 
 
-
+   
 // Validater JS
 
 // Fix email and password in the main input of the sign up and login form 
@@ -42,7 +42,7 @@ function emailVerify(event) {
 } 
 
 function verifyPassword(event) {
-    let re = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+    let re = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,160}$/;
     if (event.target == undefined){
         if (re.test(event)){
             return true
